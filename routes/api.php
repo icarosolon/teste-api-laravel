@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 Route::get('/mcf', ['as' => 'mcf.listar', 'uses' => 'MCFController@index']);
 
 //Listar um item
-Route::get('/mcf/{id}',['as'=>'mcf.listar.um','uses'=> 'MCFController@show']);
+Route::get('/mcf/{id}', ['as' => 'mcf.listar.um', 'uses' => 'MCFController@show']);
 
 //Gravar um item (nunca colocar o nome salvar. Foi colocado apenas por questão didática)
 Route::post('/mcf/salvar', ['as' => 'mcf.gravar', 'uses' => 'MCFController@store']);
@@ -35,16 +35,16 @@ Route::put('/mcf/editar/{id}', ['as' => 'mcf.gravar', 'uses' => 'MCFController@u
 //PRODUTO
 
 //Listar todos os itens
-Route::get('/produto', ['as' => 'produto.listar', 'uses' => 'ProdutoControler@index']);
+Route::get('/produto', ['as' => 'produto.listar', 'uses' => 'ProdutoController@index']);
 
 //Listar um item
-Route::get('/produto/{id}', ['as' => 'produto.listar.um', 'uses' => 'ProdutoControler@show']);
+Route::get('/produto/{id}', ['as' => 'produto.listar.um', 'uses' => 'ProdutoController@show']);
 
 //Gravar um item (nunca colocar o nome salvar. Foi colocado apenas por questão didática)
-Route::post('/produto/salvar', ['as' => 'produto.gravar', 'uses' => 'ProdutoControler@store']);
+Route::post('/produto/salvar', ['as' => 'produto.gravar', 'uses' => 'ProdutoController@store']);
 
 //Deletar um item
-Route::delete('/produto/deletar/{id}', ['as' => 'produto.deletar', 'uses' => 'ProdutoControler@destroy']);
+Route::delete('/produto/deletar/{id}', ['as' => 'produto.deletar', 'uses' => 'ProdutoController@destroy']);
 
 //Editar um item
-Route::put('/produto/Editar/{id}', ['as' => 'produto.gravar', 'uses' => 'ProdutoControler@update']);
+Route::put('/produto/Editar/{id}', ['as' => 'produto.gravar', 'uses' => 'ProdutoController@update']);
